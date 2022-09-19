@@ -1,0 +1,210 @@
+{% extends 'layouts/base2.html' %}
+{% block content %}
+    <h1>Caregiver Signup Form</h1>
+    <br>
+    <div class="about-us">
+        <p>
+            If you are interested in registering as a caregiver, please fill out the information requested below. Your responses will be sent to the local
+            council health and social care office, where it will be reviewed and vetted. The vetting process includes an interview, a police check, and
+            verification of your credentials.
+            <p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <br>
+                        <form action="/caregiver_form" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="username">Username</label>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="username"
+                                       name="username"
+                                       placeholder="Create a username (only letters and numbers)"
+                                       size="39"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="first_name">First Name</label>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="fname"
+                                       name="fname"
+                                       placeholder="Enter your first name"
+                                       size="18"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="last_name">Last Name</label>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="lname"
+                                       name="lname"
+                                       placeholder="Enter your last name"
+                                       size="18"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="email">Email Address</label>
+                                <br>
+                                <input type="email"
+                                       class="form-control"
+                                       id="email"
+                                       name="email"
+                                       placeholder="Enter your email address"
+                                       size="20"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="pass1">Password</label>
+                                <br>
+                                <input type="password"
+                                       class="form-control"
+                                       id="pass1"
+                                       name="pass1"
+                                       placeholder="Create a password (make it secure)"
+                                       size="30"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="pass2">Confirm Password</label>
+                                <br>
+                                <input type="password"
+                                       class="form-control"
+                                       id="pass2"
+                                       name="pass2"
+                                       placeholder="Confirm your password"
+                                       size="30"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <img src="/static/images/gif/london-districts.gif">
+                            <br>
+                            <div class="form-group">
+                                <label class="districtcode">District codes that you are available to travel to (max 5)</label>
+                                <br>
+                                <p>A district code is the first part of a UK postcode (for example: SW2, W8, W11)</p>
+                                <br>
+                                <select name="districtcode"
+                                        class="selectpicker"
+                                        multiple
+                                        data-live-search="true">
+                                    {% for district in districts %}
+                                        <option value="{{ district.code }}">
+                                            {{ district.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="dateofbirth">Date Of Birth</label>
+                                <br>
+                                <input type="date"
+                                       class="form-control"
+                                       id="dateofbirth"
+                                       name="dateofbirth"
+                                       placeholder="Enter your Date Of Birth"
+                                       size="25"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="address">Address</label>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="flatnumber"
+                                       name="flatnumber"
+                                       placeholder="Flat Number"
+                                       size="25"
+                                       Required>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="building"
+                                       name="building"
+                                       placeholder="Building Number/Name"
+                                       size="35"
+                                       Required>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="street"
+                                       name="street"
+                                       placeholder="Street"
+                                       size="25"
+                                       Required>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="city"
+                                       name="city"
+                                       placeholder="City"
+                                       size="25"
+                                       Required>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="postcode"
+                                       name="postcode"
+                                       placeholder="Postcode"
+                                       size="25"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="phonenumber">Phone Number</label>
+                                <br>
+                                <input type="text"
+                                       class="form-control"
+                                       id="phonenumber"
+                                       name="phonenumber"
+                                       placeholder="Enter your Phone Number"
+                                       Required>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label class="bio">Biography</label>
+                                <br>
+                                <div class="form-group">
+                                    <textarea id="bio"
+                                              class="form-control"
+                                              name="bio"
+                                              placeholder="Describe yourself to a potential employer  (you can briefly list your qualifications, experience, services you can provide, and any other information that you think would be useful for a client to know)."
+                                              style="height: 400px;
+                                                     width: 1000px;"
+                                              Required></textarea>
+                                    <br>
+                                    <br>
+                                </div>
+                                <button class="btn btn-primary" type="submit">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <script>$('select').selectpicker();</script>
+        {% endblock %}

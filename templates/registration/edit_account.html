@@ -1,0 +1,48 @@
+{% extends 'layouts/base2.html' %}
+{% block content %}
+    <br>
+    <h1>Account</h1>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <form method="post">
+                            {{ form.non_field_errors }}
+                            <div class="fieldWrapper">
+                                {{ form.username.errors }}
+                                <label for="{{ form.username.id_for_label }}">Username:</label>
+                                {{ form.username }}
+                                <br>
+                            </div>
+                            <div class="fieldWrapper">
+                                {{ form.first_name.errors }}
+                                <label for="{{ form.first_name.id_for_label }}">First name:</label>
+                                {{ form.first_name }}
+                                <br>
+                            </div>
+                            <div class="fieldWrapper">
+                                {{ form.last_name.errors }}
+                                <label for="{{ form.last_name.id_for_label }}">Last name:</label>
+                                {{ form.last_name }}
+                                <br>
+                            </div>
+                            <div class="fieldWrapper">
+                                {{ form.email.errors }}
+                                <label for="{{ form.email.id_for_label }}">Email:</label>
+                                {{ form.email }}
+                                <br>
+                            </div>
+                        </form>
+                        <a href="password/" class="btn btn-primary">Change Password</a>
+                        <br>
+                        <button class="btn btn-secondary">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

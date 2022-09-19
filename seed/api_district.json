@@ -1,0 +1,849 @@
+[
+{
+    "model": "api.district",
+    "pk": 0,
+    "fields": {
+        "code": "E1"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 1,
+    "fields": {
+        "code": "E2"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 2,
+    "fields": {
+        "code": "E3"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 3,
+    "fields": {
+        "code": "E4"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 4,
+    "fields": {
+        "code": "E5"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 5,
+    "fields": {
+        "code": "E6"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 6,
+    "fields": {
+        "code": "E7"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 7,
+    "fields": {
+        "code": "E8"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 8,
+    "fields": {
+        "code": "E9"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 9,
+    "fields": {
+        "code": "E10"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 10,
+    "fields": {
+        "code": "E11"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 11,
+    "fields": {
+        "code": "E12"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 12,
+    "fields": {
+        "code": "E13"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 13,
+    "fields": {
+        "code": "E14"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 14,
+    "fields": {
+        "code": "E15"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 15,
+    "fields": {
+        "code": "E16"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 16,
+    "fields": {
+        "code": "E17"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 17,
+    "fields": {
+        "code": "E18"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 18,
+    "fields": {
+        "code": "E19"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 19,
+    "fields": {
+        "code": "E20"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 20,
+    "fields": {
+        "code": "SE1"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 21,
+    "fields": {
+        "code": "SE2"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 22,
+    "fields": {
+        "code": "SE3"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 23,
+    "fields": {
+        "code": "SE4"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 24,
+    "fields": {
+        "code": "SE5"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 25,
+    "fields": {
+        "code": "SE6"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 26,
+    "fields": {
+        "code": "SE7"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 27,
+    "fields": {
+        "code": "SE8"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 28,
+    "fields": {
+        "code": "SE9"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 29,
+    "fields": {
+        "code": "SE10"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 30,
+    "fields": {
+        "code": "SE11"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 31,
+    "fields": {
+        "code": "SE12"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 32,
+    "fields": {
+        "code": "SE13"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 33,
+    "fields": {
+        "code": "SE14"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 34,
+    "fields": {
+        "code": "SE15"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 35,
+    "fields": {
+        "code": "SE16"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 36,
+    "fields": {
+        "code": "SE17"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 37,
+    "fields": {
+        "code": "SE18"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 38,
+    "fields": {
+        "code": "SE19"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 39,
+    "fields": {
+        "code": "SE20"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 40,
+    "fields": {
+        "code": "SE21"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 41,
+    "fields": {
+        "code": "SE22"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 42,
+    "fields": {
+        "code": "SE23"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 43,
+    "fields": {
+        "code": "SE24"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 44,
+    "fields": {
+        "code": "SE25"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 45,
+    "fields": {
+        "code": "SE26"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 46,
+    "fields": {
+        "code": "SE27"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 47,
+    "fields": {
+        "code": "SE28"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 48,
+    "fields": {
+        "code": "WC1"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 49,
+    "fields": {
+        "code": "WC2"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 50,
+    "fields": {
+        "code": "EC1"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 51,
+    "fields": {
+        "code": "EC2"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 52,
+    "fields": {
+        "code": "EC3"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 53,
+    "fields": {
+        "code": "EC4"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 54,
+    "fields": {
+        "code": "N1"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 55,
+    "fields": {
+        "code": "N2"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 56,
+    "fields": {
+        "code": "N3"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 57,
+    "fields": {
+        "code": "N4"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 58,
+    "fields": {
+        "code": "N5"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 59,
+    "fields": {
+        "code": "N6"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 60,
+    "fields": {
+        "code": "N7"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 61,
+    "fields": {
+        "code": "N8"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 62,
+    "fields": {
+        "code": "N9"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 63,
+    "fields": {
+        "code": "N10"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 64,
+    "fields": {
+        "code": "N11"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 65,
+    "fields": {
+        "code": "N12"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 66,
+    "fields": {
+        "code": "N13"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 67,
+    "fields": {
+        "code": "N14"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 68,
+    "fields": {
+        "code": "N15"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 69,
+    "fields": {
+        "code": "N16"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 70,
+    "fields": {
+        "code": "N17"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 71,
+    "fields": {
+        "code": "N18"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 72,
+    "fields": {
+        "code": "N19"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 73,
+    "fields": {
+        "code": "N20"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 74,
+    "fields": {
+        "code": "N21"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 75,
+    "fields": {
+        "code": "N22"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 76,
+    "fields": {
+        "code": "SW1"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 77,
+    "fields": {
+        "code": "SW2"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 78,
+    "fields": {
+        "code": "SW3"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 79,
+    "fields": {
+        "code": "SW4"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 80,
+    "fields": {
+        "code": "SW5"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 81,
+    "fields": {
+        "code": "SW6"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 82,
+    "fields": {
+        "code": "SW7"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 83,
+    "fields": {
+        "code": "SW8"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 84,
+    "fields": {
+        "code": "SW9"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 85,
+    "fields": {
+        "code": "SW10"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 86,
+    "fields": {
+        "code": "SW11"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 87,
+    "fields": {
+        "code": "SW12"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 88,
+    "fields": {
+        "code": "SW13"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 89,
+    "fields": {
+        "code": "SW14"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 90,
+    "fields": {
+        "code": "SW15"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 91,
+    "fields": {
+        "code": "SW16"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 92,
+    "fields": {
+        "code": "SW17"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 93,
+    "fields": {
+        "code": "SW18"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 94,
+    "fields": {
+        "code": "SW19"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 95,
+    "fields": {
+        "code": "SW20"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 96,
+    "fields": {
+        "code": "NW1"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 97,
+    "fields": {
+        "code": "NW2"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 98,
+    "fields": {
+        "code": "NW3"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 99,
+    "fields": {
+        "code": "NW4"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 100,
+    "fields": {
+        "code": "NW5"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 101,
+    "fields": {
+        "code": "NW6"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 102,
+    "fields": {
+        "code": "NW7"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 103,
+    "fields": {
+        "code": "NW8"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 104,
+    "fields": {
+        "code": "NW9"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 105,
+    "fields": {
+        "code": "NW10"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 106,
+    "fields": {
+        "code": "NW11"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 107,
+    "fields": {
+        "code": "W1"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 108,
+    "fields": {
+        "code": "W2"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 109,
+    "fields": {
+        "code": "W3"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 110,
+    "fields": {
+        "code": "W4"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 111,
+    "fields": {
+        "code": "W5"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 112,
+    "fields": {
+        "code": "W6"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 113,
+    "fields": {
+        "code": "W7"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 114,
+    "fields": {
+        "code": "W8"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 115,
+    "fields": {
+        "code": "W9"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 116,
+    "fields": {
+        "code": "W10"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 117,
+    "fields": {
+        "code": "W11"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 118,
+    "fields": {
+        "code": "W12"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 119,
+    "fields": {
+        "code": "W13"
+    }
+},
+{
+    "model": "api.district",
+    "pk": 120,
+    "fields": {
+        "code": "W14"
+    }
+}
+]

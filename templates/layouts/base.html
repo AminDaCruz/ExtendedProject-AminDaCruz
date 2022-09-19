@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Page</title>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        <link rel="stylesheet" href={% static 'css/main.css' %}>
+        <style>
+        </style>
+    </head>
+    <header>
+        <nav>
+            <img class="logo"
+                 width="200"
+                 height="40"
+                 src="/static/images/png/CarerLogo-blue.png"
+                 alt="logo">
+            <menu>
+                <menuitem>
+                <a href="/">Home</a>
+            </menuitem>
+            <menuitem>
+            <a href="/about">About</a>
+        </menuitem>
+        {% if user.is_client %}
+        <menuitem>
+        <a href="/caregiver_form">Caregiver Signup Form</a>
+    </menuitem>
+    {% endif %}
+    <menuitem>
+    <a href="/jobs">Find a Caregiver</a>
+</menuitem>
+{% if user.is_authenticated %}
+    <menuitem>
+    <a>Profile</a>
+    <menu>
+        <menuitem>
+        <a href="/edit_account">Account</a>
+    </menuitem>
+</menu>
+</menuitem>
+{% if is_superuser %}
+    <menuitem>
+    <a>Admin menu</a>
+    <menu>
+        <menuitem>
+        <a href="/clients-admin">Clients</a>
+    </menuitem>
+    <menuitem>
+    <a href="/caregivers-admin">Caregivers</a>
+</menuitem>
+</menu>
+</menuitem>
+{% endif %}
+<menuitem>
+<a style="float: right;" href="/signout">Sign out</a>
+</menuitem>
+{% else %}
+<menuitem>
+<a href="/accounts/login">Log in</a>
+</menuitem>
+{% endif %}
+</menu>
+</nav>
+</header>
+{% include 'messages.html' %}
+<body>
+    {% block content %}{% endblock %}
+</body>
+<footer class="footer">
+    <div class="col-md-2">
+        <div class="caregiver-signupform">
+            <h4>Sign up to become a caregiver today!</h4>
+            <form action="/caregiver_form">
+                <input type="submit" value="Become a Caregiver!" />
+            </form>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+</html>

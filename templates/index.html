@@ -1,0 +1,49 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+    <style>
+.headerimg {
+  background-image: url('/static/images/jpg/stock-caregiverimage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 50%;
+  height: 100%;
+  position: absolute;
+  width: 100vw;
+}
+
+.welcome {
+  margin-top: 180px;
+  position: relative;
+}
+    </style>
+    <div class="headerimg">
+    <h1 class="welcome">Welcome {{ user.first_name }} {{ user.last_name }}</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="intro">
+        <p>
+            Do you require care or help with chores around the house?
+            <br>
+            Click below to search for a caregiver
+            <br>
+        </p>
+        <a href="/jobs" class="btn btn-primary">FIND A CAREGIVER</a>
+    </div>
+    <div class="about">
+        <p>
+            Our goal is to provide care for people in need in the easiest way possible. x simplifies your search for carers who are able to work in
+            your area, and connects you with them through your local council. This will help you find one or more carers to assist you at key moments
+            for short intervals throughout the day.
+            <br>
+            <br>
+            For caregivers, x provides a way to express your willingness to deliver care in districts that are convenient to you. Through listing your
+            qualifications and experience, x matches you with suitable clients in areas to which you are willing to travel. This location-based matching
+            will allow you to batch jobs within the same area, saving you travel time and cost.
+            <br>
+        </p>
+        <p class="p1">Interested in finding out more?</p>
+        <a href="/about" class="btn btn-primary">ABOUT US</a>
+    </div>
+{% endblock %}

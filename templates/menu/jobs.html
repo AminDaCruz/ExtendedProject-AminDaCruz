@@ -1,0 +1,49 @@
+{% extends 'layouts/base2.html' %}
+{% block content %}
+    <h1>Find A Caregiver</h1>
+    <br>
+    <div class="about-us">
+        <p>
+            On this page, caregivers who are able to travel to you are listed below.
+            <br>
+            <br>
+            If you are interested in selecting a specific caregiver to help you, click the button beside their profile card.
+            <br>
+            <br>
+            You will then be directed to a page where you can contact your local council, as well as the caregiver that you are interested in, in order to discuss a job with them.
+            <br>
+            <br>
+            For your security, all of your correspondance with your caregiver through this website will be cc'd to your local council.
+        </p>
+        <br>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">bio</th>
+                            <th scope="col">Last Login</th>
+                            <th scope="col">Get In Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for caregiver in caregivers %}
+                            <tr>
+                                <td>{{ caregiver.first_name }} {{ caregiver.last_name }}</td>
+                                <td>{{ caregiver.profile.bio }}</td>
+                                <td>{{ caregiver.last_login }}</td>
+                                <td><a href = "mailto:{{caregiver.email}}?cc=examplecouncilemail@gmail.com&subject=Enquiry%20re:%20{{caregiver.first_name}}%20{{caregiver.last_name}}"</a>Select Caregiver</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+{% endblock %}

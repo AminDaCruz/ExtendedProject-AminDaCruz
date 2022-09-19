@@ -1,0 +1,100 @@
+{% extends 'layouts/base2.html' %}
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1>Home</h1>
+                <br>
+                <form action="/client_signup" method="post">
+                    {% csrf_token %}
+                    <label for="">Username</label>
+                    <br>
+                    <input type="text"
+                           id="username"
+                           name="username"
+                           placeholder="Create a username (only letters and numbers)"
+                           size="39"
+                           Required>
+                    <br>
+                    <br>
+                    <label for="">First Name</label>
+                    <br>
+                    <input type="text"
+                           id="fname"
+                           name="fname"
+                           placeholder="Enter your first name"
+                           size="18"
+                           Required>
+                    <br>
+                    <br>
+                    <label for="">Last Name</label>
+                    <br>
+                    <input type="text"
+                           id="lname"
+                           name="lname"
+                           placeholder="Enter your last name"
+                           size="18"
+                           Required>
+                    <br>
+                    <br>
+                    <label for="">Email Address</label>
+                    <br>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email address"
+                           size="20"
+                           Required>
+                    <br>
+                    <br>
+                    <label for="">Password</label>
+                    <br>
+                    <input type="password"
+                           id="pass1"
+                           name="pass1"
+                           placeholder="Create a password (make it secure)"
+                           size="30"
+                           Required>
+                    <br>
+                    <br>
+                    <label for="">Confirm Password</label>
+                    <br>
+                    <input type="password"
+                           id="pass2"
+                           name="pass2"
+                           placeholder="Confirm your password"
+                           size="30"
+                           Required>
+                    <br>
+                    <br>
+                    <img src="/static/images/gif/london-districts.gif">
+                    <br>
+                    <label for="">District Code</label>
+                    <br>
+                    <input type="text"
+                           id="districtcode"
+                           name="districtcode"
+                           placeholder="Enter your District code"
+                           size="25"
+                           Required>
+                    <br>
+                    <br>
+                    <label for="">Date Of Birth</label>
+                    <br>
+                    <input type="date"
+                           id="dateofbirth"
+                           name="dateofbirth"
+                           placeholder="Enter your Date Of Birth"
+                           size="25"
+                           Required>
+                    <br>
+                    <br>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
