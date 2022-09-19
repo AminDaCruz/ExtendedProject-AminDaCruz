@@ -19,8 +19,6 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.conf.urls.static import static
 
-
-
 # if the sender requests to playground/hello, django knows that all requests that start with playground should be handled by this app
 urlpatterns = [
     path('admin/', admin.site.urls),

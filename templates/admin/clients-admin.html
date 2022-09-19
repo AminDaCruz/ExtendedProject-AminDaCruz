@@ -49,17 +49,31 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        <form action="/action_page.php">
+        <form action="clients_admin_form" method="POST">
+          {% csrf_token %}
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" class="form-control" placeholder="Enter username" id="username">
             </div>
             <div class="form-group">
-                <select class="selectpicker" multiple data-live-search="true">
-                    {% for service in services %}
-                        <option>{{service.name}}</option>
-                    {% endfor %}
-                </select>
+              <select name="services"
+              class="selectpicker"
+              multiple
+              data-live-search="true">
+          {% for service in services %}
+              <option value="{{ service.name }}">
+                  {{ service.name }}
+              </option>
+          {% endfor %}
+      </select>
+            </div>
+            <div class="form-group">
+              <label for="fname">First name:</label>
+              <input type="text" class="form-control" placeholder="Enter first name" id="fname">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last name:</label>
+              <input type="text" class="form-control" placeholder="Enter last name" id="lname">
             </div>
             <div class="form-group">
               <label for="email">Email address:</label>
@@ -68,11 +82,6 @@
             <div class="form-group">
               <label for="pwd">Password:</label>
               <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-            </div>
-            <div class="form-group form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember me
-              </label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -86,6 +95,10 @@
     </div>
   </div>
 </div>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>

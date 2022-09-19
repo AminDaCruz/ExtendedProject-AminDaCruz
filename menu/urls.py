@@ -10,5 +10,4 @@ urlpatterns = [
     #path('edit_account/password/', auth_views.PasswordChangeView.as_view(template_name='registration/change-password.html')),
     path('edit_account/password/', PasswordsChangeView.as_view(template_name='registration/change-password.html')),
     #path('', views.base, name="base"),
-
 ]

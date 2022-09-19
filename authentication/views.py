@@ -22,7 +22,8 @@ def home(request):
     return render(request, "index.html", context)
 
 def login(request):
-
+    is_superuser = User.objects.filter(groups__name="superuser")
+    context = {"is_superuser": is_superuser}
     #if request.method == 'POST':
     #    username = request.POST['username']
     #    pass1 = request.POST['pass1']
@@ -35,7 +36,7 @@ def login(request):
     #        messages.error(request,"Incorrect Credentials!")
     #        return redirect('login')
 
-    return render(request, "authentication/login.html")
+    return render(request, "authentication/login.html", context)
 
 
 def signout(request):
@@ -45,26 +46,32 @@ def signout(request):
 
 
 def caregivers_admin(request):
+    is_superuser = User.objects.filter(groups__name="superuser")
     if request.method == 'GET':
         caregivers = User.objects.filter(groups__name='Caregiver')
-        context={'caregivers':caregivers}
+        context={'caregivers':caregivers, "is_superuser": is_superuser}
         return render(request, "admin/caregivers-admin.html", context)
     else:
+        context = {"is_superuser": is_superuser}
         print(request.body)
-        return HttpResponse(request.body)
+        return HttpResponse(request.body, context)
 
 def clients_admin(request):
+    is_superuser = User.objects.filter(groups__name="superuser")
     if request.method == 'GET':
         clients = User.objects.filter(groups__name='Client')
         services = Service.objects.all()
-        context = {'clients':clients, 'services':services}
+        context = {'clients':clients, 'services':services, "is_superuser": is_superuser}
         return render(request, "admin/clients-admin.html", context)
     else:
+        context = {"is_superuser": is_superuser}
         print(request.body)
-        return HttpResponse(request.body)
+        return HttpResponse(request.body, context)
 
 
 def caregiver_form(request):
+    is_superuser = User.objects.filter(groups__name="superuser")
+    context = {"is_superuser": is_superuser}
     if request.method == 'POST':
         username = request.POST.get('username')
         fname = request.POST.get('fname')
@@ -120,11 +127,47 @@ def caregiver_form(request):
             'examplecouncilemail@gmail.com', ['examplecouncilemail@gmail.com'], fail_silently=False
         )
 
-        return HttpResponse("this worked")
+        return redirect('/', context)
     else:
         districts=District.objects.all()
-        context={'districts':districts}
+        context={'districts':districts, "is_superuser": is_superuser}
         return render(request, 'authentication/caregiver_form.html', context)
+
+
+def clients_admin_form(request):
+    is_superuser = User.objects.filter(groups__name="superuser")
+    context = {"is_superuser": is_superuser}
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        email = request.POST.get('email')
+        pass1 = request.POST.get('pass1')
+        services = request.POST.get('services')
+
+        user = User()
+        user.username = username
+        user.first_name = fname
+        user.last_name = lname
+        user.email = email
+        user.password = pass1
+        user.is_active = 1
+        user.save()
+
+        client_group = Group.objects.get(name='Client')
+        client_group.user_set.add(user)
+
+        profile = Profile.objects.create(user=user)
+        profile.save()
+
+        for service in services:
+            user.profile.services.add(Service.objects.get(name=service))
+
+        return redirect('/', context)
+    else:
+        services=Service.objects.all()
+        context={'services':services, "is_superuser": is_superuser}
+        return render(request, 'admin/clients-admin.html', context)
 
     
 def activateUser(request, id):

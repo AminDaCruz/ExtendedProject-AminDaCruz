@@ -67,10 +67,10 @@ nav {
 }
 
 nav a {
-  font-size: 20px;
+  font-size: 18px;
   background: #235789;
   color:rgb(243, 243, 243);
-  min-width:190px;
+  min-width:150px;
   transition: background 0.5s, color 0.1s, transform 0.5s;
   margin:6px 6px 6px 6px;
   padding:20px 40px;

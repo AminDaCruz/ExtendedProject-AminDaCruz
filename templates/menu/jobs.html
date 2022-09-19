@@ -25,7 +25,7 @@
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">bio</th>
-                            <th scope="col">Last Login</th>
+                            <th scope="col">Services</th>
                             <th scope="col">Get In Contact</th>
                         </tr>
                     </thead>
@@ -34,7 +34,14 @@
                             <tr>
                                 <td>{{ caregiver.first_name }} {{ caregiver.last_name }}</td>
                                 <td>{{ caregiver.profile.bio }}</td>
-                                <td>{{ caregiver.last_login }}</td>
+                                <td>
+                                    <ul>
+                                    {% for service in caregiver.profile.services.all %}
+                                    <li>{{ service.name }}</li>
+                                    <br>
+                                    {% endfor %}
+                                    </ul>
+                                </td>
                                 <td><a href = "mailto:{{caregiver.email}}?cc=examplecouncilemail@gmail.com&subject=Enquiry%20re:%20{{caregiver.first_name}}%20{{caregiver.last_name}}"</a>Select Caregiver</td>
                             </tr>
                         {% endfor %}

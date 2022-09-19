@@ -23,13 +23,15 @@
             <menuitem>
             <a href="/about">About</a>
         </menuitem>
+        {% if not user.is_client or not is_superuser %}
         <menuitem>
         <a href="/caregiver_form">Caregiver Signup Form</a>
     </menuitem>
-    <menuitem>
+    {% endif %}
+{% if user.is_authenticated %}
+<menuitem>
     <a href="/jobs">Find a Caregiver</a>
 </menuitem>
-{% if user.is_authenticated %}
     <menuitem>
     <a>Profile</a>
     <menu>
@@ -56,7 +58,7 @@
 </menuitem>
 {% else %}
 <menuitem>
-<a href="/accounts/login">Log in</a>
+<a href="accounts/login">Log in</a>
 </menuitem>
 {% endif %}
 </menu>

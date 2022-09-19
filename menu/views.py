@@ -21,12 +21,6 @@ from django.views.decorators.csrf import csrf_exempt
 
 #group = Group.objects.get(name='caregiver')
 
-
-class ShowProfilePageView(DetailView):
-    
-
-    template_name = 'registration/user_profile.html'
-
 class PasswordsChangeView(PasswordChangeView):
     form_class = PasswordChangeForm
     success_url = reverse_lazy('home')
@@ -34,6 +28,10 @@ class PasswordsChangeView(PasswordChangeView):
 
 
 class UserEditView(generic.UpdateView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['is_superuser'] = User.objects.filter(groups__name="superuser")
+        return context
     form_class = EditProfileForm
     template_name = 'registration/edit_account.html'
     success_url = reverse_lazy('home')
@@ -42,22 +40,25 @@ class UserEditView(generic.UpdateView):
         return self.request.user
 
 def jobs(request):
+    is_superuser = User.objects.filter(groups__name="superuser")
     if request.method == 'GET':
         caregivers = User.objects.filter(groups__name='Caregiver')
         caregivers_in_users_district_code = []
         for caregiver in caregivers:
             if caregiver.profile.service_areas.filter(code=request.user.profile.district_code).exists():
                 caregivers_in_users_district_code.append(caregiver)
-        context={'caregivers':caregivers_in_users_district_code}
+        context={'caregivers':caregivers_in_users_district_code, "is_superuser": is_superuser}
         return render(request, "menu/jobs.html", context)
     else:
+        context = {"is_superuser": is_superuser}
         print(request.body)
-        return HttpResponse(request.body)
+        return HttpResponse(request.body, context)
 
 
 def about(request):
-
-    return render(request, "menu/about.html")
+    is_superuser = User.objects.filter(groups__name="superuser")
+    context = {"is_superuser": is_superuser}
+    return render(request, "menu/about.html", context)
 
 
 

@@ -9,6 +9,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
         <link rel="stylesheet" href={% static 'css/main.css' %}>
         <style>
+            body {
+                background-image: url('/static/images/jpg/stock-caregiverimage.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-size: 100% 50%;
+              }
         </style>
     </head>
     <header>
@@ -25,15 +31,15 @@
             <menuitem>
             <a href="/about">About</a>
         </menuitem>
-        {% if user.is_client %}
+        {% if not user.is_client or not is_superuser %}
         <menuitem>
         <a href="/caregiver_form">Caregiver Signup Form</a>
     </menuitem>
     {% endif %}
-    <menuitem>
+{% if user.is_authenticated %}
+<menuitem>
     <a href="/jobs">Find a Caregiver</a>
 </menuitem>
-{% if user.is_authenticated %}
     <menuitem>
     <a>Profile</a>
     <menu>
@@ -60,7 +66,7 @@
 </menuitem>
 {% else %}
 <menuitem>
-<a href="/accounts/login">Log in</a>
+<a href="accounts/login">Log in</a>
 </menuitem>
 {% endif %}
 </menu>
